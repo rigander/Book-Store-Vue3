@@ -1,8 +1,12 @@
 <template>
-  <main-header></main-header>
-  <main-sliders></main-sliders>
-  <main-content></main-content>
-  <main-footer></main-footer>
+  <body>
+  <div class="main-wrapper">
+    <main-header></main-header>
+    <main-sliders></main-sliders>
+    <main-content></main-content>
+    <main-footer></main-footer>
+  </div>
+  </body>
 </template>
 
 <script>
@@ -22,6 +26,14 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss">
+body{
+  display: flex;
+    .main-wrapper{
+      margin: auto;
+      flex-basis: 1280px;
+      font-family: SegoeWP;
+      border: solid 1px rgba(0, 0, 1, 0.16);
+    }
+}
 </style>
