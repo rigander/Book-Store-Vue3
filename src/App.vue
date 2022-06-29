@@ -1,13 +1,14 @@
 <template>
-<main-header></main-header>
+  <div class="app">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-import mainHeader from "@/components/MainHeader";
+
 export default {
   name: "App",
   components: {
-    mainHeader
   },
 
 
