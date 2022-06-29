@@ -8,7 +8,7 @@
           <ul class="fiction">
             <div class="list-title">Fiction & Literature</div>
             <li><a href=""><div>Children</div></a></li>
-            <li><a href="./category-page.html"><div>Science</div></a></li>
+            <li><a href=""><div>Science</div></a></li>
             <li><a href=""><div>Fantasy</div></a></li>
             <li><a href=""><div>Mystery</div></a></li>
             <li><a href=""><div>Romance</div></a></li>

@@ -1,6 +1,13 @@
 //HEADER
+@font-face {
+  font-family: SegoeWP;
+  src: url("@/assets/fonts/Segoe WP Regular.ttf");
+}
 
 //Variables
+
+$cw:996px;
+$ff:SegoeWP;
 %black-button-styles{
   &:hover{
     background-image: linear-gradient(to top ,#424242 ,#242424);

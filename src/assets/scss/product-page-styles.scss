@@ -1,12 +1,14 @@
-@import "normalize.css";
-@font-face {
-  font-family: SegoeWP;
-  src: url("../fonts/Segoe WP Regular.ttf");
-}
-
 // Variables
 $cw:996px;
 $ff:SegoeWP;
+%black-button-styles{
+  &:hover{
+    background-image: linear-gradient(to top ,#424242 ,#242424);
+  }
+  &:active{
+    background-image: linear-gradient(to top , #c2d1dc, rgba(36, 36, 36, 0.58));
+  }
+}
 %green-button-styles{
   &:hover{
     color: #636364;
@@ -36,7 +38,7 @@ body{
   }
 }
 
-@import "header";
+
 #main-content-wrapper{
   margin-top: 9px;
   width: 1280px;
@@ -469,6 +471,3 @@ input{
 .last-hare-element{
   border-bottom: none;
 }
-
-
-@import "footer";
