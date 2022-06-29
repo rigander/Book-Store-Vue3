@@ -1,12 +1,12 @@
 <template>
-  <body>
-  <div class="main-wrapper">
-    <main-header></main-header>
-    <main-sliders></main-sliders>
-    <main-content></main-content>
-    <main-footer></main-footer>
+  <div class="main-container">
+    <div class="main-wrapper">
+      <main-header></main-header>
+      <main-sliders></main-sliders>
+      <main-content></main-content>
+      <main-footer></main-footer>
+    </div>
   </div>
-  </body>
 </template>
 
 <script>
@@ -27,13 +27,12 @@ export default {
 </script>
 
 <style lang="scss">
-body{
+.main-container{
   display: flex;
-    .main-wrapper{
-      margin: auto;
-      flex-basis: 1280px;
-      font-family: SegoeWP;
-      border: solid 1px rgba(0, 0, 1, 0.16);
-    }
+}
+.main-wrapper{
+  flex-basis: 1280px;
+  font-family: SegoeWP;
+  border: solid 1px rgba(0, 0, 1, 0.16);
 }
 </style>
