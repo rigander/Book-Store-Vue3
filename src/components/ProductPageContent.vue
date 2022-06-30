@@ -155,7 +155,7 @@
         <section class="product-review">
           <h2 class="title">Product review</h2>
           <article class="name top-name">
-            <div class="avatar-name"><img src="/img/product-page/avatar.png" alt="">
+            <div class="avatar-name"><img src="@/assets/images/product-page/avatar.png" alt="">
               <h4>Name 1</h4></div>
             <p class="text-review">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
@@ -169,7 +169,7 @@
               including
               versions of Lorem Ipsum.</p></article>
           <article class="name bottom-name">
-            <div class="avatar-name"><img src="/img/product-page/avatar.png" alt="">
+            <div class="avatar-name"><img src="@/assets/images/product-page/avatar.png" alt="">
               <h4>Name 2</h4></div>
             <p class="text-review">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has

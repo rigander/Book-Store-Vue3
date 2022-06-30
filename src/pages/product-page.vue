@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @import "@/assets/scss/normalize.css";
 @font-face {
   font-family: SegoeWP;

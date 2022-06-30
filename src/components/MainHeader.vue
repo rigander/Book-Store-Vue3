@@ -360,7 +360,6 @@ $ff:SegoeWP;
         color: #5b5b5b;
         &:hover{
           color: #ff0000;
-          font-size: 20px;
           font-weight: bold;
         }
         &:active{

@@ -418,6 +418,7 @@ input{
 .may-like{
   box-sizing: border-box;
   margin-top: 78px;
+  margin-right: 0;
   max-height: 771px;
   min-width: 248px;
   border: solid 1px #d4d4d5;
@@ -430,11 +431,11 @@ input{
 }
 .hare-with-amber{
   height: 103.8px;
-  width: 249px;
+  width: 243px;
   border-bottom: 1px solid #c0c0c1;
   display: flex;
   align-items: center;
-  padding-left: 11px;
+  padding-left: 4px;
   img{
     height: 88px;
     width: 60px;
