@@ -1,4 +1,4 @@
-import Main from "@/pages/Main";
+import mainPage from "@/pages/main-page";
 import {createRouter, createWebHistory} from "vue-router";
 import categoryPage from "@/pages/category-page";
 import productPage from "@/pages/product-page";
@@ -7,7 +7,7 @@ import productPage from "@/pages/product-page";
 const routes = [
     {
         path: '/',
-        component: Main
+        component: mainPage
     },
     {
         path: '/product',
