@@ -1,7 +1,6 @@
-@import "normalize.css";
 @font-face {
   font-family: SegoeWP;
-  src: url("../fonts/Segoe WP Regular.ttf");
+  src: url("@/assets/fonts/Segoe WP Regular.ttf");
 }
 
 // Variables
@@ -18,8 +17,6 @@ body{
     border: solid 1px rgba(0, 0, 1, 0.16);
   }
 }
-@import "header";
-
 #main-content-wrapper{
   margin-top: 14px;
   width: 1280px;
@@ -181,8 +178,6 @@ body{
     }
   }
 }
-
 @import "aside-left";
 
-@import "footer";
 

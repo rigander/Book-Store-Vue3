@@ -14,7 +14,9 @@
       <div class="header-content-container">
         <div class="header-content">
           <div class="header-content__books-online">
-            <img src="@/assets/images/header/logo.png" alt="">
+            <img
+                @click="$router.push('/')"
+                src="@/assets/images/header/logo.png" alt="">
           </div>
           <div class="header-content__search-panel">
             <input id="search" type="search">

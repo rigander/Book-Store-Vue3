@@ -9,16 +9,8 @@
 </template>
 
 <script>
-import mainHeader from "@/components/MainHeader";
-import productPageContent from "@/components/ProductPageContent";
-import mainFooter from "@/components/MainFooter";
 export default {
   name: "product-page",
-  components: {
-    mainHeader,
-    productPageContent,
-    mainFooter
-  }
 }
 </script>
 

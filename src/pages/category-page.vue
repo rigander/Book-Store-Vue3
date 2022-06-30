@@ -1,10 +1,13 @@
 <template>
-<h1>Category Page</h1>
+<main-header></main-header>
+<category-page-content></category-page-content>
+<main-footer></main-footer>
 </template>
 
 <script>
+
 export default {
-  name: "category-page"
+  name: "category-page",
 }
 </script>
 
