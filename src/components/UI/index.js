@@ -7,6 +7,9 @@ import categoryPageContent from "@/components/CategoryPageContent";
 import CategoriesSideBar from "@/components/UI/CategoriesSideBar";
 import ProductListContent from "@/components/UI/ProductListContent";
 import pageNumbers from "@/components/UI/PageNumbers";
+import discount from "@/components/UI/product_item/discount";
+import book from "@/components/UI/product_item/book";
+import price from "@/components/UI/product_item/price";
 export default [
         MainSliders,
         MainHeader,
@@ -16,7 +19,10 @@ export default [
         categoryPageContent,
         CategoriesSideBar,
         ProductListContent,
-        pageNumbers
+        pageNumbers,
+        discount,
+        book,
+        price
 ]
 
 

@@ -1,20 +1,65 @@
 <template>
   <div class="product-list__content">
-    <div><div class="discount"><span>30%</span><span class="off">Off</span></div><a href=""><img src="@/assets/images/BestSellers/1.png" alt="image"></a><p>The Hare With Amber Eyes</p><span>$50</span> </div>
-    <div><a href=""><img src="@/assets/images/BestSellers/2.png" alt="image"></a><p>The war of </p><span class="art">Art</span><span>$60</span></div>
-    <div><div class="discount"><span>30%</span><span class="off">Off</span></div><a href=""><img src="@/assets/images/BestSellers/3.png" alt="image"></a><p>The Hare With Amber Eyes</p><span>$25</span></div>
-    <div><a href=""><img src="@/assets/images/BestSellers/4.png" alt="image"></a><p class="immortals">The Immortals of Meluha</p><span>$80</span></div>
-    <div><a href=""><img src="@/assets/images/BestSellers/5.png" alt="image"></a><p>Life Is What You Make It</p><span>$200</span></div>
-    <div><a href=""><img src="@/assets/images/BestSellers/6.png" alt="image"></a><p>The Hare With Amber Eyes</p><span>$200</span></div>
-    <div><a href=""><img src="@/assets/images/BestSellers/7.png" alt="image"></a><p>The war of</p><span class="art">Art</span><span>$150</span></div>
-    <div><div class="discount"><span>30%</span><span class="off">Off</span></div><a href=""><img src="@/assets/images/BestSellers/8.png" alt="image"></a>The Hare With Amber Eyes<span>$100</span></div>
-    <div><a href=""><img src="@/assets/images/BestSellers/9.png" alt="image"></a><p class="immortals">The Immortals of Meluha</p><span>$152</span></div>
-    <div><a href=""><img src="@/assets/images/BestSellers/10.png" alt="image"></a><p>Life Is What You Make It</p><span>$200</span></div>
-    <div><a href=""><img src="@/assets/images/BestSellers/11.png" alt="image"></a><p>The Hare With Amber Eyes</p><span>$220</span></div>
-    <div><a href=""><img src="@/assets/images/BestSellers/12.png" alt="image"></a><p>The war of </p><span class="art">Art</span><span>$10</span></div>
-    <div><a href=""><img src="@/assets/images/BestSellers/13.png" alt="image"></a><p>The Hare With Amber Eyes</p><span>$22</span></div>
-    <div><div class="discount"><span>30%</span><span class="off">Off</span></div><a href=""><img src="@/assets/images/BestSellers/14.png" alt="image"></a><p class="immortals">The Immortals of Meluha</p><span>$300</span></div>
-    <div><a href=""><img src="@/assets/images/BestSellers/15.png" alt="image"></a><p>Life Is What You Make It</p><span>$205</span></div>
+    <div>
+      <discount/>
+      <a href=""><img  :src="products[0].img" :alt="i"></a>
+      <p>The Hare With Amber Eyes</p><price/>
+    </div>
+    <div>
+      <a href=""><img :src="products[1]" :alt="i"></a>
+      <p>The war of </p><span class="art">Art</span><span>$60</span></div>
+    <div>
+      <discount/>
+      <a href=""><img  :src="products[2]" :alt="i"></a><p>The Hare With Amber Eyes</p><span>$25</span></div>
+    <div>
+      <a href=""><img :src="products[3]" :alt="i"></a>
+      <p class="immortals">The Immortals of Meluha</p><span>$80</span></div>
+    <div>
+      <a href=""><img :src="products[4]" :alt="i"></a>
+      <p>Life Is What You Make It</p><span>$200</span></div>
+    <div>
+      <a href=""><img :src="products[5]" :alt="i"></a>
+      <p>The Hare With Amber Eyes</p><span>$200</span></div>
+    <div>
+      <a href=""><img :src="products[6]" :alt="i"></a>
+      <p>The war of</p><span class="art">Art</span><span>$150</span></div>
+    <div>
+      <discount/>
+      <a href=""><img  :src="products[7]" alt="image"></a>
+      <p>The Hare With Amber Eyes</p><span>$100</span></div>
+    <div>
+      <a href=""><img :src="products[8]" :alt="i"></a>
+      <p class="immortals">The Immortals of Meluha</p>
+      <span>$152</span></div>
+    <div>
+      <a href=""><img :src="products[9]" :alt="i"></a>
+      <p>Life Is What You Make It</p>
+      <span>$200</span>
+    </div>
+    <div>
+      <a href=""><img :src="products[10]" :alt="i"></a>
+      <p>The Hare With Amber Eyes</p>
+      <span>$220</span>
+    </div>
+    <div>
+      <a href=""><img :src="products[11]" :alt="i"></a>
+      <p>The war of </p>
+      <span class="art">Art</span><span>$10</span>
+    </div>
+    <div>
+      <a href=""><img :src="products[12]" :alt="i"></a>
+      <p>The Hare With Amber Eyes</p><span>$22</span>
+    </div>
+    <div>
+      <discount/><a href=""><img  :src="products[13]" alt="image"></a>
+      <p class="immortals">The Immortals of Meluha</p>
+      <span>$300</span>
+    </div>
+    <div>
+      <a href=""><img :src="products[14]" :alt="i"></a>
+      <p>Life Is What You Make It</p>
+      <span>$205</span>
+    </div>
     <page-numbers></page-numbers>
   </div>
 </template>
@@ -24,13 +69,37 @@ export default {
   name: "ProductListContent",
   data() {
     return {
-      products: [
-        {id:1, title:'The Hare With Amber Eyes', price:'50$', image: ''}
+         products: [
+            {id:1, img: require('@/assets/images/BestSellers/1.png'), price:'50$' },
+             require('@/assets/images/BestSellers/2.png'),
+             require('@/assets/images/BestSellers/3.png'),
+             require('@/assets/images/BestSellers/4.png'),
+             require('@/assets/images/BestSellers/5.png'),
+             require('@/assets/images/BestSellers/6.png'),
+             require('@/assets/images/BestSellers/7.png'),
+             require('@/assets/images/BestSellers/8.png'),
+             require('@/assets/images/BestSellers/9.png'),
+             require('@/assets/images/BestSellers/10.png'),
+             require('@/assets/images/BestSellers/11.png'),
+             require('@/assets/images/BestSellers/12.png'),
+             require('@/assets/images/BestSellers/13.png'),
+             require('@/assets/images/BestSellers/14.png'),
+             require('@/assets/images/BestSellers/15.png'),
       ],
+         i: 'book image'
     }
   },
   methods: {
+    createProductItem() {
+      const newProduct = {
+        id: Date.now(),
+        title: this.title,
+        img: this.img,
+        price: this.price,
+      }
+      this.products.push(newProduct);
 
+    }
   }
 }
 
