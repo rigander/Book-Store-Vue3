@@ -13,31 +13,7 @@
             <li><div class="shadow"><a href="">Special Offers</a></div></li>
           </ul><div class="big-box"></div>
         </div>
-        <div class="product-list__best-sellers">
-          <div><div class="discount"><span>30%</span><span class="off">Off</span></div><a href=""><img src="@/assets/images/BestSellers/1.png" alt="image"></a><p>The Hare With Amber Eyes</p><span>$50</span> </div>
-          <div><a href=""><img src="@/assets/images/BestSellers/2.png" alt="image"></a><p>The war of </p><span class="art">Art</span><span>$60</span></div>
-          <div><div class="discount"><span>30%</span><span class="off">Off</span></div><a href=""><img src="@/assets/images/BestSellers/3.png" alt="image"></a><p>The Hare With Amber Eyes</p><span>$25</span></div>
-          <div><a href=""><img src="@/assets/images/BestSellers/4.png" alt="image"></a><p class="immortals">The Immortals of Meluha</p><span>$80</span></div>
-          <div><a href=""><img src="@/assets/images/BestSellers/5.png" alt="image"></a><p>Life Is What You Make It</p><span>$200</span></div>
-          <div><a href=""><img src="@/assets/images/BestSellers/6.png" alt="image"></a><p>The Hare With Amber Eyes</p><span>$200</span></div>
-          <div><a href=""><img src="@/assets/images/BestSellers/7.png" alt="image"></a><p>The war of</p><span class="art">Art</span><span>$150</span></div>
-          <div><div class="discount"><span>30%</span><span class="off">Off</span></div><a href=""><img src="@/assets/images/BestSellers/8.png" alt="image"></a>The Hare With Amber Eyes<span>$100</span></div>
-          <div><a href=""><img src="@/assets/images/BestSellers/9.png" alt="image"></a><p class="immortals">The Immortals of Meluha</p><span>$152</span></div>
-          <div><a href=""><img src="@/assets/images/BestSellers/10.png" alt="image"></a><p>Life Is What You Make It</p><span>$200</span></div>
-          <div><a href=""><img src="@/assets/images/BestSellers/11.png" alt="image"></a><p>The Hare With Amber Eyes</p><span>$220</span></div>
-          <div><a href=""><img src="@/assets/images/BestSellers/12.png" alt="image"></a><p>The war of </p><span class="art">Art</span><span>$10</span></div>
-          <div><a href=""><img src="@/assets/images/BestSellers/13.png" alt="image"></a><p>The Hare With Amber Eyes</p><span>$22</span></div>
-          <div><div class="discount"><span>30%</span><span class="off">Off</span></div><a href=""><img src="@/assets/images/BestSellers/14.png" alt="image"></a><p class="immortals">The Immortals of Meluha</p><span>$300</span></div>
-          <div><a href=""><img src="@/assets/images/BestSellers/15.png" alt="image"></a><p>Life Is What You Make It</p><span>$205</span></div>
-          <div id="page-number">
-            <div class="one"><a href="">1</a></div>
-            <div class="two"><a href="">2</a></div>
-            <div class="three"><a href="">3</a></div>
-            <div class="four"><a href="">4</a></div>
-            <div class="five"><a href="">5</a></div>
-            <div class="six"><a href="">6</a></div>
-          </div>
-        </div>
+        <product-list-content></product-list-content>
       </section>
     </div>
   </main>
@@ -46,7 +22,6 @@
 <script>
 export default {
   name: "MainContent",
-  components: {}
 
 }
 </script>
@@ -157,115 +132,7 @@ body{
           border-bottom: 1px solid #d8dce0;
         }
       }
-      #page-number{
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        width: 138px;
-        height: 28px;
-        font-size: 16px;
-        font-weight: 300;
-        color: #646464;
-        margin-left: 631px;
-        margin-top: 21px;
-        padding: 0;
-        &:hover{
-          color: #FFCC00;
-        }
-        div{
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          height: 28px;
-          width: 24px;
-          padding: 0;
-          a{
-            text-decoration: none;
-            color: #646464;
-            &:hover{
-              color: red;
-              font-size: 20px;
-              font-weight: bold;
-            }
-          }
-        }
-        .three{
-          padding-top: 2px;
-          height: 23px;
-          border: 1px solid #bfbfbf;
-          border-bottom: 4px solid #94bc6b;
-        }
-      }
-      .product-list__best-sellers{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 8px 5px 0 5px;
-        border: solid 1px #d8dce0;
-        border-top: none;
-        height: 825px;
-        div{
-          position: relative;
-          font-size: 15px;
-          font-weight: 300;
-          text-align: center;
-          color: #646464;
-          height: 256px;
-          width: 125px;
-          display: flex;
-          flex-direction: column;
-          padding-left: 9px;
-          .discount{
-            align-self: end;
-            position: absolute;
-            margin-top: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 50px;
-            width: 50px;
-            border:none;
-            border-radius: 50%;
-            background-color: #f05356;
-            padding: 0;
-            color: white;
-            font-size: 19px;
-            span{
-              color: #ffffff;
-              font-family: $ff;
-              font-size: 19px;
-              font-weight: bold;
-            }
-            .off{
-              font-size: 13px;
-              font-weight: normal;
-              color: #ffffff;
-            }
-          }
-          p{
-            margin: 0;
-          }
-          img{
-            height: 177px;
-          }
-          span{
-            display: block;
-            font-weight: bold;
-            font-size: 22px;
-            color: #f05356;
-          }
-        }
-        .art{
-          color: inherit;
-          font: inherit;
-        }
-        .immortals{
-          padding: 0 7px;
-        }
-      }
+
     }
   }
 }

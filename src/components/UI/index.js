@@ -5,6 +5,8 @@ import MainSliders from "@/components/MainSliders";
 import ProductPageContent from "@/components/ProductPageContent";
 import categoryPageContent from "@/components/CategoryPageContent";
 import CategoriesSideBar from "@/components/UI/CategoriesSideBar";
+import ProductListContent from "@/components/UI/ProductListContent";
+import pageNumbers from "@/components/UI/PageNumbers";
 export default [
         MainSliders,
         MainHeader,
@@ -12,7 +14,9 @@ export default [
         MainContent,
         ProductPageContent,
         categoryPageContent,
-        CategoriesSideBar
+        CategoriesSideBar,
+        ProductListContent,
+        pageNumbers
 ]
 
 
