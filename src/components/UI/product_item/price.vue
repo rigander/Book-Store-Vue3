@@ -1,5 +1,5 @@
 <template>
-  <span>${{ $store.state.price }}</span>
+  <span>$90</span>
 </template>
 
 <script>
