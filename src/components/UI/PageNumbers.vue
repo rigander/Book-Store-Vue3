@@ -1,17 +1,26 @@
 <template>
   <div id="page-number">
-    <div class="one"><a href="">1</a></div>
-    <div class="two"><a href="">2</a></div>
-    <div class="three"><a href="">3</a></div>
-    <div class="four"><a href="">4</a></div>
-    <div class="five"><a href="">5</a></div>
-    <div class="six"><a href="">6</a></div>
+    <div
+        v-for="page in pages"
+        class="one"><a href="">{{page.id}}</a></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "PageNumbers"
+  name: "PageNumbers",
+  data() {
+    return {
+      pages:[
+        {id: 1},
+        {id: 2},
+        {id: 3},
+        {id: 4},
+        {id: 5},
+        {id: 6}
+      ]
+    }
+  },
 }
 </script>
 
@@ -50,11 +59,11 @@ export default {
       }
     }
   }
-  .three{
-    padding-top: 2px;
-    height: 23px;
-    border: 1px solid #bfbfbf;
-    border-bottom: 4px solid #94bc6b;
-  }
+}
+.current-page{
+  padding-top: 2px;
+  height: 23px;
+  border: 1px solid #bfbfbf;
+  border-bottom: 4px solid #94bc6b;
 }
 </style>
