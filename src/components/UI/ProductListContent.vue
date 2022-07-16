@@ -2,6 +2,7 @@
   <div class="product-list__content">
     <book
         :books="books"
+        :booksLimitOnPage="booksLimitOnPage"
     />
     <PageNumbers/>
   </div>
@@ -139,7 +140,11 @@ export default {
 
 
 
-      ]
+      ],
+      booksLimitOnPage: 10,
+      page: 1,
+      limit: 6,
+      totalPages: 0
     }
   },
   methods: {
@@ -151,8 +156,8 @@ export default {
         price: this.price,
       }
       this.products.push(newProduct);
-
     }
+
   }
 }
 
