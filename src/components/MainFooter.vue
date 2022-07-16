@@ -58,7 +58,7 @@
           <li><a href="">Fourier Analysis</a></li>
           <li><a href="">Numerical Analysis</a></li>
           <li><a href="">Probability</a></li>
-          <li><a href="">Statistic Methods/data Analyses</a></li>
+          <li><a href="">Statistic Methods/best_sellers_data Analyses</a></li>
           <li><a href="">Stochastic And Random Processes</a></li>
           <li><a href="">Topology</a></li>
           <li><a href="">Statistics</a></li>

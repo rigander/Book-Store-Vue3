@@ -1,92 +1,145 @@
 <template>
   <div class="product-list__content">
-    <div>
-      <discount/>
-      <a href=""><img  :src="products[0].img" :alt="i"></a>
-      <p>The Hare With Amber Eyes</p><price/>
-    </div>
-    <div>
-      <a href=""><img :src="products[1]" :alt="i"></a>
-      <p>The war of </p><span class="art">Art</span><span>$60</span></div>
-    <div>
-      <discount/>
-      <a href=""><img  :src="products[2]" :alt="i"></a><p>The Hare With Amber Eyes</p><span>$25</span></div>
-    <div>
-      <a href=""><img :src="products[3]" :alt="i"></a>
-      <p class="immortals">The Immortals of Meluha</p><span>$80</span></div>
-    <div>
-      <a href=""><img :src="products[4]" :alt="i"></a>
-      <p>Life Is What You Make It</p><span>$200</span></div>
-    <div>
-      <a href=""><img :src="products[5]" :alt="i"></a>
-      <p>The Hare With Amber Eyes</p><span>$200</span></div>
-    <div>
-      <a href=""><img :src="products[6]" :alt="i"></a>
-      <p>The war of</p><span class="art">Art</span><span>$150</span></div>
-    <div>
-      <discount/>
-      <a href=""><img  :src="products[7]" alt="image"></a>
-      <p>The Hare With Amber Eyes</p><span>$100</span></div>
-    <div>
-      <a href=""><img :src="products[8]" :alt="i"></a>
-      <p class="immortals">The Immortals of Meluha</p>
-      <span>$152</span></div>
-    <div>
-      <a href=""><img :src="products[9]" :alt="i"></a>
-      <p>Life Is What You Make It</p>
-      <span>$200</span>
-    </div>
-    <div>
-      <a href=""><img :src="products[10]" :alt="i"></a>
-      <p>The Hare With Amber Eyes</p>
-      <span>$220</span>
-    </div>
-    <div>
-      <a href=""><img :src="products[11]" :alt="i"></a>
-      <p>The war of </p>
-      <span class="art">Art</span><span>$10</span>
-    </div>
-    <div>
-      <a href=""><img :src="products[12]" :alt="i"></a>
-      <p>The Hare With Amber Eyes</p><span>$22</span>
-    </div>
-    <div>
-      <discount/><a href=""><img  :src="products[13]" alt="image"></a>
-      <p class="immortals">The Immortals of Meluha</p>
-      <span>$300</span>
-    </div>
-    <div>
-      <a href=""><img :src="products[14]" :alt="i"></a>
-      <p>Life Is What You Make It</p>
-      <span>$205</span>
-    </div>
-    <page-numbers></page-numbers>
+    <book
+        :books="books"
+    />
+    <PageNumbers/>
   </div>
 </template>
 
 <script>
+import Book from "@/components/UI/product_item/book";
+import PageNumbers from "@/components/UI/PageNumbers";
 export default {
   name: "ProductListContent",
+  components: {PageNumbers, Book},
   data() {
     return {
-         products: [
-            {id:1, img: require('@/assets/images/BestSellers/1.png'), price:'50$' },
-             require('@/assets/images/BestSellers/2.png'),
-             require('@/assets/images/BestSellers/3.png'),
-             require('@/assets/images/BestSellers/4.png'),
-             require('@/assets/images/BestSellers/5.png'),
-             require('@/assets/images/BestSellers/6.png'),
-             require('@/assets/images/BestSellers/7.png'),
-             require('@/assets/images/BestSellers/8.png'),
-             require('@/assets/images/BestSellers/9.png'),
-             require('@/assets/images/BestSellers/10.png'),
-             require('@/assets/images/BestSellers/11.png'),
-             require('@/assets/images/BestSellers/12.png'),
-             require('@/assets/images/BestSellers/13.png'),
-             require('@/assets/images/BestSellers/14.png'),
-             require('@/assets/images/BestSellers/15.png'),
-      ],
-         i: 'book image'
+      books: [
+        {
+          id: 1,
+          title: 'The Hare With ',
+          title2: 'Amber Eyes',
+          image: require('@/assets/images/BestSellers/1.png'),
+          price: '90$',
+          discount: true
+        },
+        {
+          id: 2,
+          title: 'The war of',
+          title2: 'Art',
+          image: require('@/assets/images/BestSellers/2.png'),
+          price: '60$',
+          discount: false
+        },
+        {
+          id: 3,
+          title: 'The Hare With',
+          title2: 'Amber Eyes',
+          image: require('@/assets/images/BestSellers/3.png'),
+          price: '25$',
+          discount: true
+        },
+        {
+          id: 4,
+          title: 'The Immortals',
+          title2: 'of Meluha',
+          image: require('@/assets/images/BestSellers/4.png'),
+          price: '80$',
+          discount: false
+        },
+        {
+          id: 5,
+          title: 'Life is What You',
+          title2: 'Make It',
+          image: require('@/assets/images/BestSellers/5.png'),
+          price: '200$',
+          discount: false
+        },
+        {
+          id: 6,
+          title: 'The Hare With',
+          title2: 'Amber Eyes',
+          image: require('@/assets/images/BestSellers/6.png'),
+          price: '200$',
+          discount: false
+        },
+        {
+          id: 7,
+          title: 'The war of',
+          title2: 'Art',
+          image: require('@/assets/images/BestSellers/7.png'),
+          price: '150$',
+          discount: false
+        },
+        {
+          id: 8,
+          title: 'The Hare With',
+          title2: 'Amber Eyes',
+          image: require('@/assets/images/BestSellers/8.png'),
+          price: '100$',
+          discount: true
+        },
+        {
+          id: 9,
+          title: 'The Immortals',
+          title2: 'of Meluha',
+          image: require('@/assets/images/BestSellers/9.png'),
+          price: '152$',
+          discount: false
+        },
+        {
+          id: 10,
+          title: 'Life is What You',
+          title2: 'Make It',
+          image: require('@/assets/images/BestSellers/10.png'),
+          price: '200$',
+          discount: false
+        },
+        {
+          id: 11,
+          title: 'The Hare With',
+          title2: 'Amber Eyes',
+          image: require('@/assets/images/BestSellers/11.png'),
+          price: '220$',
+          discount: false
+        },
+        {
+          id: 12,
+          title: 'The war of',
+          title2: 'Art',
+          image: require('@/assets/images/BestSellers/12.png'),
+          price: '10$',
+          discount: false
+        },
+        {
+          id: 13,
+          title: 'The Hare With',
+          title2: 'Amber Eyes',
+          image: require('@/assets/images/BestSellers/13.png'),
+          price: '22$',
+          discount: false
+        },
+        {
+          id: 14,
+          title: 'The Immortals',
+          title2: 'of Meluha',
+          image: require('@/assets/images/BestSellers/14.png'),
+          price: '300$',
+          discount: true
+        },
+        {
+          id: 15,
+          title: 'Life is What You',
+          title2: 'Make It',
+          image: require('@/assets/images/BestSellers/15.png'),
+          price: '205$',
+          discount: false
+        },
+
+
+
+      ]
     }
   },
   methods: {
