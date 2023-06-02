@@ -2,7 +2,10 @@
   <div class="product-list__content">
     <book
         :books="books"
-        :booksLimitOnPage="booksLimitOnPage"
+        :indexStart = "indexStart"
+        :indexEnd = "indexEnd"
+        :paginated = "paginated"
+        :pageSize = "pageSize"
     />
     <PageNumbers/>
   </div>
@@ -141,24 +144,21 @@ export default {
 
 
       ],
-      booksLimitOnPage: 10,
-      page: 1,
-      limit: 6,
-      totalPages: 0
+      current: 1,
+      pageSize: 10
     }
   },
-  methods: {
-    createProductItem() {
-      const newProduct = {
-        id: Date.now(),
-        title: this.title,
-        img: this.img,
-        price: this.price,
-      }
-      this.products.push(newProduct);
+  computed: {
+    indexStart() {
+      return (this.current - 1) * this.pageSize;
+    },
+    indexEnd() {
+      return this.indexStart + this.pageSize;
+    },
+    paginated() {
+      return this.books.slice(this.indexStart, this.indexEnd);
     }
-
-  }
+  },
 }
 
 </script>

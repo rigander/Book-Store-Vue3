@@ -21,13 +21,21 @@ import Discount from "@/components/UI/product_item/discount";
 export default {
   name: "book",
   components: {Discount},
+  data(){
+    return {
+      pageNumber: 0
+    }
+  },
   props: {
     books: {
       type: Array,
       required: true,
-    }
-  }
+    },
+  },
 
+  methods: {
+
+  }
 }
 </script>
 

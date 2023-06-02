@@ -1,8 +1,9 @@
-import { createApp } from 'vue'
+import { createApp } from 'vue';
 import App from "@/App";
 import router from "@/router/router";
-import components from '@/components/UI'
-import store from '@/store'
+import components from '@/components/UI';
+import store from '@/store';
+
 
 
 const app = createApp(App)
